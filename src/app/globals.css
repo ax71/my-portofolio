@@ -1,26 +1,56 @@
 @import "tailwindcss";
 
+@theme {
+  --color-navy-main: #0A1931;
+  --color-navy-surface: #1A3D63;
+  --color-navy-accent: #4A7FA7;
+  --color-navy-muted: #B3CFE5;
+  --color-navy-text: #F6FAFD;
+
+  --font-sans: var(--font-inter);
+}
+
+/* 
+  Setting up the base styles. 
+  The PRD specifies Dark Mode Only.
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: var(--color-navy-main);
+  --foreground: var(--color-navy-text);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Fallback or specific usage if needed */
+  --card: var(--color-navy-surface);
+  --card-foreground: var(--color-navy-text);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --popover: var(--color-navy-main);
+  --popover-foreground: var(--color-navy-text);
+
+  --primary: var(--color-navy-accent);
+  --primary-foreground: var(--color-navy-text);
+
+  --secondary: var(--color-navy-surface);
+  --secondary-foreground: var(--color-navy-muted);
+
+  --muted: var(--color-navy-surface);
+  --muted-foreground: var(--color-navy-muted);
+
+  --accent: var(--color-navy-accent);
+  --accent-foreground: var(--color-navy-text);
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: var(--color-navy-accent);
+  --input: var(--color-navy-surface);
+  --ring: var(--color-navy-accent);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
 }
+
+/* Utilities for Shadcn-like merging if needed later, 
+   though Tailwind v4 handles a lot of conflict resolution natively, 
+   our cn() utility still helps. */
