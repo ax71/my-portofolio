@@ -1,8 +1,16 @@
 export const PORTFOLIO_CONTENT = {
+  about: {
+    headline: "About Me",
+    sub: "Hallo, Saya I Kadek Buktiasa, seorang Web Developer & Mahasiswa Informatika yang berbasis di Denpasar,Bali. Saya memiliki ketertarikan dalam ekosistem modern seperti Next.js, Tailwind CSS, dan Supabase. Berpengalaman dalam mentransformasi kebutuhan bisnis menjadi produk digital yang cepat, skalabel, dan ramah SEO. Saat ini aktif mencari peluang untuk berkontribusi dalam tim profesional sambil terus mengembangkan keahlian teknis saya.",
+  },
   hero: {
     h1: "Building Scalable Web Solutions with React & Next.js.",
     sub: "Developer web yang fokus membangun aplikasi fungsional, cepat, dan modern. Memanfaatkan ekosistem teknologi terbaik untuk memberikan solusi digital yang tepat guna.",
     cta: "Lihat Project Saya",
+  },
+  tech: {
+    headline: "Tech Stack",
+    sub: "Teknologi yang saya gunakan untuk membangun aplikasi.",
   },
   techStack: [
     {
@@ -18,10 +26,16 @@ export const PORTFOLIO_CONTENT = {
       description:
         "Framework andalan saya untuk struktur project yang solid. Dengan Next.js, saya bisa membangun website yang tidak hanya cepat diakses, tapi juga mudah ditemukan di mesin pencari (SEO Friendly).",
     },
+    {
+      title: "Database & Backend",
+      badge: "Supabase",
+      description:
+        "Saya menggunakan Supabase sebagai database dan backend untuk aplikasi saya. Supabase adalah platform backend sebagai layanan yang menyediakan database, otentikasi, dan API untuk aplikasi web dan mobile.",
+    },
   ],
   philosophy: {
-    headline: "Simple & Effective.",
-    body: "Saya percaya pada spesialisasi. Dengan memfokuskan diri pada dua teknologi ini, saya bisa bekerja lebih efektif memahami alur (flow) pengembangan aplikasi dari awal hingga siap dipakai. Saya tidak sekadar menulis kode, saya memastikan sistem yang dibangun berjalan sesuai kebutuhan bisnis Anda.",
+    headline: "Crafting Quality, Delivering Impact.",
+    body: "Saya percaya bahwa kualitas sebuah karya ditentukan oleh detail di baliknya. Motivasi saya adalah menghasilkan produk digital yang bersih secara arsitektur namun kuat secara fungsi. Dedikasi saya adalah memberikan hasil terbaik untuk setiap proyek yang saya kerjakan.",
   },
   projects: [
     {

@@ -2,8 +2,17 @@ import { PORTFOLIO_CONTENT } from "@/lib/data";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 export function TechStack() {
+  const { headline, sub } = PORTFOLIO_CONTENT.tech;
   return (
-    <section className="py-20">
+    <section id="tech" className="py-20">
+      <div className="mb-10">
+        <h2 className="mb-4 text-3xl font-bold text-navy-text md:text-5xl md:w-1/3">
+          {headline}
+        </h2>
+        <p className="text-lg leading-relaxed text-navy-muted md:text-xl md:w-2/3">
+          {sub}
+        </p>
+      </div>
       <div className="grid gap-6 md:grid-cols-2">
         {PORTFOLIO_CONTENT.techStack.map((tech, index) => (
           <Card

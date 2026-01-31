@@ -2,18 +2,16 @@
 
 import { PORTFOLIO_CONTENT } from "@/lib/data";
 import { ProjectCard } from "@/components/ui/project-card";
-import { forwardRef } from "react";
 
 export function Projects() {
   return (
-    <section className="py-20">
+    <section id="projects" className="py-20">
       <div className="mb-10">
-        <h2 className="text-3xl font-bold text-navy-text mb-4">
-          Selected Projects
+        <h2 className="mb-4 text-3xl font-bold text-navy-text md:text-5xl md:w-1/3">
+          Projects Developed
         </h2>
-        <p className="text-navy-muted max-w-xl">
-          Bukti nyata dari dedikasi saya dalam membangun solusi digital yang
-          berdampak.
+        <p className="text-lg leading-relaxed text-navy-muted md:text-xl md:w-2/3">
+          Berikut adalah beberapa proyek yang telah saya kembangkan :
         </p>
       </div>
 
