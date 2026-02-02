@@ -4,6 +4,7 @@ import { Philosophy } from "@/components/sections/Philosophy";
 import { Projects } from "@/components/sections/Projects";
 import GithubActivity from "@/components/sections/GithubActivity";
 import About from "@/components/sections/about";
+import { Certificate } from "@/components/sections/certificate";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Philosophy />
       <GithubActivity />
       <Projects />
+      <Certificate />
       <footer className="py-10 text-center text-sm text-navy-muted border-t border-navy-accent/10 mt-10">
         <p>
           &copy; {new Date().getFullYear()} My Portfolio. Built with Next.js &

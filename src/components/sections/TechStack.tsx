@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 export function TechStack() {
   const { headline, sub } = PORTFOLIO_CONTENT.tech;
   return (
-    <section id="tech" className="py-20">
+    <section id="tech" className="py-20 border-b border-navy-accent/10">
       <div className="mb-10">
         <h2 className="mb-4 text-3xl font-bold text-navy-text md:text-5xl md:w-1/3">
           {headline}

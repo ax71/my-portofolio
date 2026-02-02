@@ -6,7 +6,7 @@ import { PORTFOLIO_CONTENT } from "@/lib/data";
 export default function GithubActivity() {
   const { headline } = PORTFOLIO_CONTENT.githubActivity;
   return (
-    <div id="github" className="flex flex-col gap-10">
+    <div id="github" className="py-20 border-b border-navy-accent/10">
       <div className="flex">
         <h2 className="text-3xl font-bold text-navy-text md:text-5xl md:w-1/3">
           {headline}
