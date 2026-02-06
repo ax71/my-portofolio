@@ -1,6 +1,6 @@
 import { PORTFOLIO_CONTENT } from "@/lib/data";
 
-export function Philosophy() {
+export default function Philosophy() {
   const { headline, body } = PORTFOLIO_CONTENT.philosophy;
 
   return (

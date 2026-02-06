@@ -1,10 +1,10 @@
-import { Hero } from "@/components/sections/Hero";
-import { TechStack } from "@/components/sections/TechStack";
-import { Philosophy } from "@/components/sections/Philosophy";
-import { Projects } from "@/components/sections/Projects";
+import Hero from "@/components/sections/Hero";
+import TechStack from "@/components/sections/TechStack";
+import Philosophy from "@/components/sections/Philosophy";
+import Projects from "@/components/sections/Projects";
 import GithubActivity from "@/components/sections/GithubActivity";
 import About from "@/components/sections/About";
-import { Certificate } from "@/components/sections/Certificate";
+import Certificate from "@/components/sections/Certificate";
 
 export default function Home() {
   return (

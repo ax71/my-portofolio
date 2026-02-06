@@ -3,7 +3,7 @@
 import { PORTFOLIO_CONTENT } from "@/lib/data";
 import { ProjectCard } from "@/components/ui/project-card";
 
-export function Projects() {
+export default function Projects() {
   return (
     <section id="projects" className="py-20 border-b border-navy-accent/10">
       <div className="mb-10">

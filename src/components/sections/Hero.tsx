@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export function Hero() {
+export default function Hero() {
   const { h1, sub, cta } = PORTFOLIO_CONTENT.hero;
 
   return (

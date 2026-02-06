@@ -1,7 +1,7 @@
 import { PORTFOLIO_CONTENT } from "@/lib/data";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
-export function TechStack() {
+export default function TechStack() {
   const { headline, sub } = PORTFOLIO_CONTENT.tech;
   return (
     <section id="tech" className="py-20 border-b border-navy-accent/10">

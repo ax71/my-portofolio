@@ -1,6 +1,6 @@
 import { AnimatedCard } from "../ui/animated-card";
 
-export function Certificate() {
+export default function Certificate() {
   const testimonials = [
     {
       quote:
