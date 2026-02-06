@@ -26,9 +26,9 @@ export function Navbar() {
           <Link href="#tech">Tech Stack</Link>
           <Link href="#philosophy">Philosophy</Link>
           <Link href="#projects">Projects</Link>
+          <Link href="#certificate">Certificate</Link>
         </nav>
 
-        {/* Right Action */}
         <div className="flex items-center gap-2">
           <Button
             variant="outline"
@@ -38,7 +38,6 @@ export function Navbar() {
             <Link href="https://wa.me/6285190657236">Contact Me</Link>
           </Button>
 
-          {/* Hamburger */}
           <button
             className="md:hidden text-navy-text"
             onClick={() => setIsOpen(!isOpen)}
@@ -48,7 +47,6 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Menu Mobile */}
       {isOpen && (
         <div className="md:hidden border-b border-navy-accent/10 bg-navy-main px-4 pb-4">
           <Link href="#about" className="block py-2">
@@ -62,6 +60,9 @@ export function Navbar() {
           </Link>
           <Link href="#projects" className="block py-2">
             Projects
+          </Link>
+          <Link href="#certificate" className="block py-2">
+            Certificate
           </Link>
         </div>
       )}

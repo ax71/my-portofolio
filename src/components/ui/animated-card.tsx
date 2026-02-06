@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion"; // Gunakan framer-motion atau motion/react
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import useIsMounted from "@/hooks/useIsMounted";
@@ -131,7 +131,7 @@ export const AnimatedCard = ({
             </motion.p>
           </motion.div>
 
-          <div className="flex gap-4 pt-12 md:pt-0">
+          <div className="mt-8 flex gap-4 pt-12 md:pt-0">
             <button
               onClick={handlePrev}
               className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"

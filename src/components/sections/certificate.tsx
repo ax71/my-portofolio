@@ -4,42 +4,42 @@ export function Certificate() {
   const testimonials = [
     {
       quote:
-        "Akun I Kadek Buktiasa telah terverifikasi secara resmi oleh WPU Course. Maka dari itu WPU Course mengeluarkan sertifikat ini sebagai bukti bahwa yang bersangkutan sudah menyelesaikan Full Stack Next JS : Realtime Point Of Sale Apps by WPU Course.",
+        "Berhasil menyelesaikan pelatihan komprehensif membangun aplikasi 'Realtime Point Of Sale' (POS). Menguasai implementasi fitur modern Next.js, manajemen state yang kompleks, serta integrasi database untuk transaksi realtime.",
       name: "Sertifikat Full Stack Next JS : Realtime Point Of Sale Apps",
       designation: "WPU Course",
       src: "/certificates/wpu-course.png",
     },
     {
       quote:
-        "Build Reliable & Fast Laundry Web App with React + PayloadCMS pada tanggal 17-20 Desember 2025 selama 8 Jam Pembelajaran dengan pemateri Arsadi Arsadi",
+        "Menyelesaikan studi kasus pembuatan Aplikasi Web Laundry. Berfokus pada integrasi Frontend React.js yang cepat dengan PayloadCMS sebagai Backend management sistem yang fleksibel dan scalable.",
       name: "Mini Class React JS x PayloadCMS",
       designation: "Dunia Coding",
       src: "/certificates/dunia-coding.png",
     },
     {
       quote:
-        "Panduan untuk mempelajari dasar-dasar pemrograman JavaScript dalam pemrograman web",
+        "Menguasai logika pemrograman fundamental JavaScript, manipulasi DOM, serta konsep asinkronus untuk menciptakan interaktivitas website yang dinamis dan fungsional.",
       name: "Belajar JavaScript",
       designation: "KelasFullstack",
       src: "/certificates/javascript.png",
     },
     {
       quote:
-        "Mengenal dan belajar dasar-dasar CSS untuk fondasi awal belajar web development",
+        "Memahami prinsip desain web modern menggunakan CSS, termasuk implementasi layouting (Flexbox/Grid) dan desain responsif agar tampilan web optimal di berbagai ukuran layar.",
       name: "Belajar CSS",
       designation: "KelasFullstack",
       src: "/certificates/css.png",
     },
     {
       quote:
-        "HTML merupakan pengetahuan umum yang harus dimiliki oleh setiap orang yang menggeluti bidang web programming. Dalam kelas ini, kamu akan belajar mulai dari bagaimana konsep dasar dan cara kerja dari HTML serta bagaimana penggunaannya dalam membangun sebuah tampilan website",
+        "Memiliki pemahaman mendalam tentang struktur semantik HTML5, standar aksesibilitas web, dan optimasi SEO on-page sebagai fondasi utama pengembangan web.",
       name: "Belajar HTML",
       designation: "KelasFullstack",
       src: "/certificates/html.png",
     },
   ];
   return (
-    <div className="py-20">
+    <div id="certificate" className="py-20">
       <h2 className="text-3xl font-bold text-navy-text md:text-5xl md:w-1/3">
         Certificate
       </h2>
