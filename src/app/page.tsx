@@ -3,8 +3,8 @@ import TechStack from "@/components/sections/TechStack";
 import Philosophy from "@/components/sections/Philosophy";
 import Projects from "@/components/sections/Projects";
 import GithubActivity from "@/components/sections/GithubActivity";
-import About from "@/components/sections/About";
 import Certificate from "@/components/sections/Certificates";
+import About from "@/components/sections/AboutUs";
 
 export default function Home() {
   return (
