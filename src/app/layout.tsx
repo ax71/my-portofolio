@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/layout/Navbar";
+import SmoothScroll from "@/components/providers/SmoothScroll";
+import CustomCursor from "@/components/ui/CustomCursor";
 
-// Initialize Inter font
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio | React & Next.js Developer",
-  description: "Building Scalable Web Solutions with React & Next.js.",
+  title: "Kadek Buktiasa — Builder. Problem Solver. Bali.",
+  description:
+    "Full-Stack Developer based in Bali, Indonesia. I build digital products that create real impact for people and businesses.",
+  keywords: ["Kadek Buktiasa", "Full-Stack Developer", "Bali", "Next.js", "React"],
 };
 
 export default function RootLayout({
@@ -21,17 +31,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={cn(
-          "min-h-screen bg-navy-main text-navy-text antialiased font-sans flex flex-col",
-          inter.variable,
-        )}
-      >
-        <Navbar />
-        <main className="flex-1 w-full max-w-[1200px] mx-auto px-4 md:px-6">
-          {children}
-        </main>
+    <html lang="en">
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased bg-ink text-primary`}>
+        <SmoothScroll>
+          <CustomCursor />
+          <Navbar />
+          <main className="flex-1">{children}</main>
+        </SmoothScroll>
       </body>
     </html>
   );

@@ -1,71 +1,184 @@
 "use client";
 
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { Menu, X, Github, Download } from "lucide-react";
+import { PORTFOLIO_CONTENT } from "@/lib/data";
+
+gsap.registerPlugin(useGSAP);
+
+const navLinks = [
+  { label: "Work", href: "#work" },
+  { label: "Process", href: "#process" },
+  { label: "About", href: "#about" },
+];
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        headerRef.current,
+        { y: -24 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.9,
+          ease: "power3.out",
+        },
+      );
+    },
+    {
+      scope: headerRef,
+    },
+  );
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-navy-accent/10 bg-navy-main/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="text-xl font-bold tracking-tight text-navy-text"
-        >
-          Buktiasa
-          <p className="text-xs font-normal text-navy-accent">Portfolio</p>
-        </Link>
+    <>
+      <header
+        ref={headerRef}
+        style={{ opacity: 0 }}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          scrolled
+            ? "bg-ink/85 backdrop-blur-md border-b border-edge"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-6 md:px-12 lg:px-20">
+          {/* Monogram */}
+          <Link
+            href="/"
+            className="font-heading text-xl text-primary hover:text-signal transition-colors tracking-tight"
+          ></Link>
 
-        {/* Menu Desktop */}
-        <nav className="hidden gap-6 md:flex">
-          <Link href="#about">About</Link>
-          <Link href="#tech">Tech Stack</Link>
-          <Link href="#philosophy">Philosophy</Link>
-          <Link href="#projects">Projects</Link>
-          <Link href="#certificate">Certificate</Link>
-        </nav>
+          {/* Desktop nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm text-muted hover:text-primary transition-colors tracking-[0.05em]"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
 
-        <div className="flex items-center gap-2">
-          <Button
-            variant="outline"
-            size="sm"
-            className="hidden border-navy-accent/50 md:inline-flex"
-          >
-            <Link href="https://wa.me/6285190657236">Contact Me</Link>
-          </Button>
+          {/* Desktop right side */}
+          <div className="hidden flex md:flex items-center gap-5">
+            <Link
+              href={PORTFOLIO_CONTENT.contact.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-primary transition-colors"
+              aria-label="GitHub"
+            >
+              <Github size={18} />
+            </Link>
+            <Link
+              href="/resume.pdf"
+              download
+              className="flex items-center gap-2 text-sm text-muted hover:text-primary transition-colors tracking-[0.05em]"
+            >
+              <Download size={13} />
+              Resume
+            </Link>
+          </div>
 
+          {/* Mobile toggle */}
           <button
-            className="md:hidden text-navy-text"
-            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-primary p-1.5"
+            onClick={() => setIsOpen(true)}
+            aria-label="Open menu"
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            <Menu size={22} />
           </button>
         </div>
-      </div>
+      </header>
 
+      {/* Mobile overlay menu */}
       {isOpen && (
-        <div className="md:hidden border-b border-navy-accent/10 bg-navy-main px-4 pb-4">
-          <Link href="#about" className="block py-2">
-            About
-          </Link>
-          <Link href="#tech" className="block py-2">
-            Tech Stack
-          </Link>
-          <Link href="#philosophy" className="block py-2">
-            Philosophy
-          </Link>
-          <Link href="#projects" className="block py-2">
-            Projects
-          </Link>
-          <Link href="#certificate" className="block py-2">
-            Certificate
-          </Link>
+        <div
+          className="fixed inset-0 bg-ink z-[100] md:hidden flex flex-col justify-center px-8"
+          onClick={(e) => e.target === e.currentTarget && setIsOpen(false)}
+        >
+          <button
+            className="absolute top-5 right-6 text-primary p-1.5"
+            onClick={() => setIsOpen(false)}
+            aria-label="Close menu"
+          >
+            <X size={24} />
+          </button>
+
+          <p className="text-dim text-xs tracking-[0.35em] uppercase mb-10">
+            Navigation
+          </p>
+
+          <nav className="flex flex-col gap-6">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="font-heading text-[52px] leading-none text-primary hover:text-signal transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="#contact"
+              className="font-heading text-[52px] leading-none text-signal"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </Link>
+          </nav>
+
+          <div className="absolute bottom-10 left-8 flex flex-col gap-3">
+            <div className="flex items-center gap-5">
+              <Link
+                href={PORTFOLIO_CONTENT.contact.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted hover:text-primary transition-colors"
+                aria-label="GitHub"
+                onClick={() => setIsOpen(false)}
+              >
+                <Github size={18} />
+              </Link>
+              <a
+                href="/resume.pdf"
+                download
+                className="text-sm text-muted hover:text-primary transition-colors tracking-wide"
+                onClick={() => setIsOpen(false)}
+              >
+                Resume
+              </a>
+            </div>
+            <p className="text-dim text-xs tracking-wide">
+              Kadek Buktiasa · Bali, Indonesia
+            </p>
+          </div>
         </div>
       )}
-    </header>
+    </>
   );
 }

@@ -1,56 +1,82 @@
 @import "tailwindcss";
 
 @theme {
-  --color-navy-main: #0A1931;
-  --color-navy-surface: #1A3D63;
-  --color-navy-accent: #4A7FA7;
-  --color-navy-muted: #B3CFE5;
-  --color-navy-text: #F6FAFD;
+  /* Color System */
+  --color-ink: #0A0A0A;
+  --color-surface: #111111;
+  --color-edge: #1F1F1F;
+  --color-primary: #F5F0E8;
+  --color-muted: #8A8680;
+  --color-dim: #4A4744;
+  --color-signal: #C8A96E;
 
+  /* Typography */
   --font-sans: var(--font-inter);
+  --font-heading: var(--font-playfair);
 }
 
-/* 
-  Setting up the base styles. 
-  The PRD specifies Dark Mode Only.
-*/
-:root {
-  --background: var(--color-navy-main);
-  --foreground: var(--color-navy-text);
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
 
-  /* Fallback or specific usage if needed */
-  --card: var(--color-navy-surface);
-  --card-foreground: var(--color-navy-text);
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
 
-  --popover: var(--color-navy-main);
-  --popover-foreground: var(--color-navy-text);
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
 
-  --primary: var(--color-navy-accent);
-  --primary-foreground: var(--color-navy-text);
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
 
-  --secondary: var(--color-navy-surface);
-  --secondary-foreground: var(--color-navy-muted);
-
-  --muted: var(--color-navy-surface);
-  --muted-foreground: var(--color-navy-muted);
-
-  --accent: var(--color-navy-accent);
-  --accent-foreground: var(--color-navy-text);
-
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-
-  --border: var(--color-navy-accent);
-  --input: var(--color-navy-surface);
-  --ring: var(--color-navy-accent);
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: #0A0A0A;
+  color: #F5F0E8;
   font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
 }
 
-/* Utilities for Shadcn-like merging if needed later, 
-   though Tailwind v4 handles a lot of conflict resolution natively, 
-   our cn() utility still helps. */
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+}
+
+/* Text selection */
+::selection {
+  background: #C8A96E;
+  color: #0A0A0A;
+}
+
+/* Custom cursor — hide native on desktop */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+}
+
+/* Section clip for text reveal animations */
+.clip-text {
+  overflow: hidden;
+}
+
+/* Smooth focus outline */
+:focus-visible {
+  outline: 1px solid #C8A96E;
+  outline-offset: 2px;
+}
