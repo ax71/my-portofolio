@@ -1,61 +1,197 @@
 export const PORTFOLIO_CONTENT = {
-  about: {
-    headline: "About Me",
-    sub: "Hallo, Saya I Kadek Buktiasa, seorang Web Developer & Mahasiswa Informatika yang berbasis di Denpasar,Bali. Saya memiliki ketertarikan dalam ekosistem modern seperti Next.js, Tailwind CSS, dan Supabase. Berpengalaman dalam mentransformasi kebutuhan bisnis menjadi produk digital yang cepat, skalabel, dan ramah SEO. Saat ini aktif mencari peluang untuk berkontribusi dalam tim profesional sambil terus mengembangkan keahlian teknis saya.",
-  },
   hero: {
-    h1: "Building Scalable Web Solutions with React & Next.js.",
-    sub: "Developer web yang fokus membangun aplikasi fungsional, cepat, dan modern. Memanfaatkan ekosistem teknologi terbaik untuk memberikan solusi digital yang tepat guna.",
-    cta: "Lihat Project Saya",
+    tagline: ["BUILDER.", "PROBLEM", "SOLVER."],
+    name: "I Kadek Buktiasa",
+    role: "Frontend Developer",
+    location: "BALI, INDONESIA.",
+    sub: "I build web applications that work — for real clients, real problems, and real users.",
+    cta: "View My Work",
+    ctaSecondary: "Let's Talk",
   },
-  tech: {
-    headline: "Tech Stack",
-    sub: "Teknologi yang saya gunakan untuk membangun aplikasi.",
-  },
-  techStack: [
+
+  impact: [
     {
-      title: "Interactive UI Builder",
-      badge: "React JS",
-      description:
-        "Pilihan utama saya untuk membangun antarmuka yang dinamis. Saya menggunakan React untuk memastikan setiap interaksi pengguna terasa mulus, rapi, dan responsif di berbagai perangkat.",
+      value: 4,
+      suffix: "+",
+      label: "Projects Built",
+      description: "Delivered for real clients & businesses",
     },
     {
-      title:
-        "Delivering high-performance web applications with Server-Side Rendering and SEO-first architecture",
-      badge: "Next.js",
-      description:
-        "Framework andalan saya untuk struktur project yang solid. Dengan Next.js, saya bisa membangun website yang tidak hanya cepat diakses, tapi juga mudah ditemukan di mesin pencari (SEO Friendly).",
+      value: 1,
+      suffix: "+",
+      label: "Years Experience",
+      description: "Building production applications",
     },
     {
-      title: "Database & Backend",
-      badge: "Supabase",
-      description:
-        "Saya menggunakan Supabase sebagai database dan backend untuk aplikasi saya. Supabase adalah platform backend sebagai layanan yang menyediakan database, otentikasi, dan API untuk aplikasi web dan mobile.",
+      value: 4,
+      suffix: "+",
+      label: "Certifications",
+      description: "Successfully Completed",
     },
   ],
-  philosophy: {
-    headline: "Crafting Quality, Delivering Impact.",
-    body: "Saya percaya bahwa kualitas sebuah karya ditentukan oleh detail di baliknya. Motivasi saya adalah menghasilkan produk digital yang bersih secara arsitektur namun kuat secara fungsi. Dedikasi saya adalah memberikan hasil terbaik untuk setiap proyek yang saya kerjakan.",
-  },
+
+  whatIBuild: [
+    "Web Applications",
+    "Local Business Solutions",
+    "Tourism Platforms",
+    "Tools That Simplify Work",
+  ],
+
   projects: [
     {
-      title: "Aplikasi Poin Of Sales",
-      image: "/project-2.png",
-      description:
-        "Sebuah proyek implementasi Point of Sales (POS) yang dirancang untuk bahan belajar arsitektur Next.js App Router. Fokus utama proyek ini adalah penguasaan Server-Side Rendering (SSR), integrasi database real-time dengan Supabase.",
-      tags: ["Next.js", "Tailwind", "Shadcn UI", "TypeScript", "Supabase"],
-      projectLink: "https://www.cafein.fun",
+      index: "01",
+      title: "Naraya Bali Tour",
+      industry: "Tourism · Internship Project",
+      problem:
+        "The company needed a modern website to showcase tour packages, destinations, and business information while improving its online presence and accessibility for both local and international customers.",
+      what: "Independently designed and developed a bilingual tourism website during my internship using Next.js. The platform features tour package listings, destination information, article publishing, contact channels, and a responsive user experience optimized for mobile devices. I also handled deployment through Vercel and domain configuration.",
+      outcome:
+        "Successfully delivered a production website that is actively used by the company. The project gave me valuable experience building, deploying, and maintaining a real-world application within a business environment.",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Vercel",
+        "SEO",
+        "Responsive Design",
+      ],
+      image: "/project-4-ikadek-buktiasa.png",
+      link: "https://narayabalitour.com",
+      available: true,
     },
     {
-      title: "Yoga's Bike Rental - Landing Page",
-      image: "/project-11.png",
-      description:
-        "Membantu bisnis lokal di Ubud menjangkau lebih banyak pelanggan. Website ini dibangun untuk mempermudah turis melihat katalog motor dan melakukan pemesanan via WhatsApp.",
-      tags: ["Next.js", "Tailwind", "SEO Optimized", "TypeScript"],
-      projectLink: "https://yogasbikerental.com",
+      index: "02",
+      title: "Yoga's Bike Rental",
+      industry: "Tourism · Client Project",
+      problem:
+        "The business needed more than a simple website. Vehicle information, pricing, and listings had to be updated regularly, but every change depended on manual edits from the developer.",
+      what: "Built a rental website with an owner dashboard, authentication system, and Supabase integration. The owner can manage vehicle listings, update prices, add new motorcycles, and remove outdated entries without touching the code.",
+      outcome:
+        "Helped the business manage its website content independently while giving me hands-on experience with authentication, database integration, CRUD operations, and deployment maintenance.",
+      tags: ["Next.js", "TypeScript", "Supabase", "Supabase Auth", "Tailwind"],
+      image: "/project-1-ikadek-buktiasa.png",
+      link: "https://yogasbikerental.com",
+      available: true,
+    },
+    {
+      index: "03",
+      title: "Dewa Rental Ubud",
+      industry: "Tourism · Client Project",
+      problem:
+        "A local vehicle rental business offering both motorcycles and cars needed a professional online presence to help potential customers discover their services and make inquiries more easily.",
+      what: "Designed and developed a responsive website showcasing available vehicles, rental information, and WhatsApp integration for direct customer communication.",
+      outcome:
+        "Helped the business strengthen its online presence and provide a simpler way for customers to explore rental options before contacting the owner.",
+      tags: ["Next.js", "TypeScript", "SEO", "Tailwind"],
+      image: "/project-3-ikadek-buktiasa.png",
+      link: "https://dewarentalubud.com",
+      available: true,
+    },
+    {
+      index: "04",
+      title: "Cafein POS",
+      industry: "Personal Project",
+      problem:
+        "I wanted a practical way to learn full-stack development with Next.js and Supabase beyond tutorials and small exercises.",
+      what: "A Point of Sale web application built to explore order management, inventory tracking, authentication, and database integration.",
+      outcome:
+        "Gained hands-on experience building a complete full-stack application from frontend to database — covering auth flows, real-time data, and CRUD systems.",
+      tags: ["Next.js", "Supabase", "TypeScript", "Tailwind"],
+      image: "/project-2-ikadek-buktiasa.png",
+      link: "https://www.cafein.fun",
+      available: true,
     },
   ],
-  githubActivity: {
-    headline: "Github Activity",
+
+  process: [
+    {
+      step: "01",
+      title: "Discover",
+      body: "I start with the people, not the tech. Understanding the real problem before writing a single line.",
+    },
+    {
+      step: "02",
+      title: "Define",
+      body: "I frame problems before I design solutions. Clarity upfront prevents expensive rework later.",
+    },
+    {
+      step: "03",
+      title: "Build",
+      body: "I write systems, not just features. Code that scales, performs, and makes sense six months from now.",
+    },
+    {
+      step: "04",
+      title: "Ship",
+      body: "I care what happens after launch. A product isn't done when it's deployed it's done when it works for users.",
+    },
+  ],
+
+  about: {
+    quote: "Curiosity is what got me started. Building is what keeps me going.",
+    story: [
+      "I'm Kadek Buktiasa, a developer from Bali building web applications for real clients and businesses. I work across the full stack — from UI to database — and I've shipped production systems that are actively used today.",
+
+      "I focus on understanding what a product needs to do before deciding how to build it. That means clean architecture, pragmatic decisions, and outcomes that hold up after launch.",
+
+      "What drives me isn't just shipping code — it's the moment a business owner can update their own website for the first time, or when a customer finds what they need without friction. Every project I deliver teaches me something new about systems, people, and craft.",
+
+      "I'm actively building, growing, and looking for meaningful work to collaborate on. If you have a problem worth solving, I'd like to hear about it.",
+    ],
+
+    tags: [
+      "Full-Stack Development",
+      "Technology Enthusiast",
+      "Problem Solving",
+    ],
+  },
+
+  capabilities: [
+    {
+      category: "Frontend",
+      items: [
+        "React & Next.js development",
+        "Responsive web design",
+        "Modern UI implementation",
+        "Performance-focused interfaces",
+      ],
+    },
+    {
+      category: "Backend",
+      items: [
+        "Node.js & Express",
+        "REST API development",
+        "Authentication systems",
+        "Database integration",
+      ],
+    },
+    {
+      category: "Projects",
+      items: [
+        "Building side projects",
+        "Learning by shipping",
+        "Problem-solving with technology",
+        "Experimenting with new ideas",
+      ],
+    },
+    {
+      category: "Exploring",
+      items: [
+        "Artificial Intelligence",
+        "AI-powered applications",
+        "SaaS products",
+        "Startup development",
+      ],
+    },
+  ],
+  contact: {
+    headline: "Have a problem worth solving?",
+    cta: "LET'S TALK.",
+    email: "ikadekbuktiasa04@gmail.com",
+    whatsapp: "https://wa.me/6285190657236",
+    github: "https://github.com/ax71",
+    linkedin: "https://www.linkedin.com/in/kadek-buktiasa/",
+    location: "Bali, Indonesia",
+    availability: "Open to remote work & collaboration",
+    resume: "/resume.pdf",
   },
 };
