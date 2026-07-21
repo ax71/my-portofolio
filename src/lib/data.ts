@@ -2,7 +2,7 @@ export const PORTFOLIO_CONTENT = {
   hero: {
     tagline: ["BUILDER.", "PROBLEM", "SOLVER."],
     name: "I Kadek Buktiasa",
-    role: "Frontend Developer",
+    role: "Full Stack Developer ",
     location: "BALI, INDONESIA.",
     sub: "I build web applications that work — for real clients, real problems, and real users.",
     cta: "View My Work",
@@ -40,6 +40,29 @@ export const PORTFOLIO_CONTENT = {
   projects: [
     {
       index: "01",
+      title: "Delta Casa Group",
+      industry: "Hospitality · Villa Rental · Internship Project",
+      problem:
+        "The company needed an online booking platform to showcase its villas, display real-time availability, and let guests reserve and pay for stays directly — replacing a manual, WhatsApp-only booking process that was slow and hard to scale.",
+      what: "Built a bilingual (EN/ID) villa booking platform with Next.js (App Router). I developed villa listings with detail pages, activities and special offers, promo-code validation, and an end-to-end booking flow. The app integrates the HostHub channel manager for real-time availability and blocked dates, Payment gateway with webhook-based payment confirmation, and Strapi as a headless CMS so the client can edit content (homepage images, footer, terms) without touching code. WhatsApp remains available as an alternative booking channel.",
+      outcome:
+        "Delivered a production-ready booking platform that automates availability and payments while keeping content editable by the client via the CMS. The project gave me hands-on experience integrating third-party APIs (PMS, payment gateway, headless CMS), handling payment webhooks, and shipping an internationalized, responsive product in a real business environment.",
+      tags: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Strapi CMS",
+        "Xendit Payments",
+        "HostHub API",
+        "React Query",
+        "Vercel",
+      ],
+      image: "/project-5-ikadek-buktiasa.png",
+      link: "https://deltacasagroup.com",
+      available: true,
+    },
+    {
+      index: "02",
       title: "Naraya Bali Tour",
       industry: "Tourism · Internship Project",
       problem:
@@ -60,7 +83,7 @@ export const PORTFOLIO_CONTENT = {
       available: true,
     },
     {
-      index: "02",
+      index: "03",
       title: "Yoga's Bike Rental",
       industry: "Tourism · Client Project",
       problem:
@@ -74,7 +97,7 @@ export const PORTFOLIO_CONTENT = {
       available: true,
     },
     {
-      index: "03",
+      index: "04",
       title: "Dewa Rental Ubud",
       industry: "Tourism · Client Project",
       problem:
@@ -88,7 +111,7 @@ export const PORTFOLIO_CONTENT = {
       available: true,
     },
     {
-      index: "04",
+      index: "05",
       title: "Cafein POS",
       industry: "Personal Project",
       problem:
@@ -177,7 +200,7 @@ export const PORTFOLIO_CONTENT = {
       category: "Exploring",
       items: [
         "Artificial Intelligence",
-        "AI-powered applications",
+        "Mobile App Developer",
         "SaaS products",
         "Startup development",
       ],
