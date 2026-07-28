@@ -94,7 +94,7 @@ export function Navbar() {
               <Github size={18} />
             </Link>
             <Link
-              href="/resume.pdf"
+              href="/I_Kadek_Buktiasa_Full_Stack_Developer.pdf"
               download
               className="flex items-center gap-2 text-sm text-muted hover:text-primary transition-colors tracking-[0.05em]"
             >
